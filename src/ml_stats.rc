@@ -1,0 +1,275 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "http://www.heddway.com/"
+            VALUE "CompanyName", "Heddway"
+            VALUE "FileDescription", "Winamp Media Library Stastics"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ml_stats.dll"
+            VALUE "LegalCopyright", "(c) 2005, Heddway.  All rights reserved."
+            VALUE "OriginalFilename", "ml_stats.dll"
+            VALUE "ProductName", "ml_stats"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_STATS, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 232
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_STATS_BASIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_STATS_INTERNAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_PROCESSING, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 128
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 36
+    END
+
+    IDD_STATS_ALBUM, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_STATS_ARTISTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_STATS DIALOGEX 0, 0, 235, 164
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ml_stats: Media Library Statistics"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Done",IDOK,111,147,50,14
+    PUSHBUTTON      "About",IDC_ABOUT,176,147,50,14
+    GROUPBOX        "Statistics Filter",IDC_STATIC,3,2,229,30
+    EDITTEXT        IDC_QUERY,9,13,175,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Filter",IDC_FILTER,190,13,37,12
+    CONTROL         "",IDC_STATS_TABS,"SysTabControl32",0x0,3,39,229,105
+END
+
+IDD_STATS_BASIC DIALOGEX 0, 0, 219, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Play Counter: %COUNT%",IDC_PLAY_COUNT,9,63,85,8
+    LTEXT           "Total Artists: %COUNT%",IDC_ARTIST_COUNT,9,12,82,8
+    LTEXT           "Total Albums: %COUNT%",IDC_ALBUM_COUNT,9,20,84,8
+    LTEXT           "Total Genres: %COUNT%",IDC_GENRE_COUNT,9,28,84,8
+    LTEXT           "Total Tracks: %COUNT%",IDC_TRACK_COUNT,9,36,82,8
+    LTEXT           "Rated Tracks: %COUNT%",IDC_RATED_COUNT,123,12,86,8
+    LTEXT           "Unrated Tracks: %COUNT%",IDC_UNRATED_COUNT,123,20,92,8
+    GROUPBOX        "Media Library Totals",IDC_STATIC,3,2,103,47
+    GROUPBOX        "Ratings",IDC_STATIC,114,2,104,83
+    LTEXT           "Avg. Track Rating: %AVG%",IDC_RATING_AVG,123,72,91,8
+    GROUPBOX        "Play Counts",IDC_STATIC,3,52,103,32
+    LTEXT           "Avg. Play Count: %AVG%",IDC_PLAYCOUNT_AVG,9,71,86,8
+    LTEXT           "5 Star Tracks: %COUNT%",IDC_5STAR_TRACKS,123,30,86,8
+    LTEXT           "4 Star Tracks: %COUNT%",IDC_4STAR_TRACKS,123,38,86,8
+    LTEXT           "3 Star Tracks: %COUNT%",IDC_3STAR_TRACKS,123,46,86,8
+    LTEXT           "2 Star Tracks: %COUNT%",IDC_2STAR_TRACKS,123,54,86,8
+    LTEXT           "1 Star Tracks: %COUNT%",IDC_1STAR_TRACKS,123,62,86,8
+END
+
+IDD_STATS_INTERNAL DIALOGEX 0, 0, 217, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "ML Header Version: %VERSION%",IDC_MLHDR_VER,3,2,109,8
+END
+
+IDD_PROCESSING DIALOGEX 10, 60, 134, 41
+STYLE DS_SYSMODAL | DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_STATICEDGE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "PROCESSING...",IDC_STATIC,40,4,52,8
+    LTEXT           "Please wait.  This make take a while for large libraries.",
+                    IDC_STATIC,10,18,119,18
+END
+
+IDD_STATS_ALBUM DIALOGEX 0, 0, 219, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Longest Album: %COUNT% tracks",IDC_LONGEST_ALBUM,9,12,
+                    114,8
+    GROUPBOX        "Track Counts",IDC_STATIC,3,2,126,40
+    LTEXT           "Avg. Album Length: %AVG% tracks",IDC_AVG_ALBUM,9,20,116,
+                    8
+    LTEXT           "One Track Albums: %COUNT% tracks",IDC_ONE_TRACK_ALBUMS,
+                    9,28,114,8
+    LTEXT           "Span: %SPAN%",IDC_ALBUM_SPAN,143,12,68,8
+    GROUPBOX        "Covered Years",IDC_STATIC,138,2,81,85
+    LTEXT           "2000 + : %COUNT%",IDC_2000_PLUS,143,73,69,8
+    LTEXT           "1990 - 1999: %COUNT%",IDC_1990_1999,143,65,69,8
+    LTEXT           "1980 - 1989: %COUNT%",IDC_1980_1989,143,57,69,8
+    LTEXT           "1970 - 1979: %COUNT%",IDC_1970_1979,143,49,69,8
+    LTEXT           "1960 - 1969: %COUNT%",IDC_1960_1969,143,41,69,8
+    LTEXT           "1950 - 1959: %COUNT%",IDC_1950_1959,143,34,69,8
+    LTEXT           "Pre 1950: %COUNT%",IDC_PRE_1950,143,26,69,8
+END
+
+IDD_STATS_ARTISTS DIALOGEX 0, 0, 219, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Created by Jason Heddings\nhttp://www.heddway.com/\nCopyright (c) 2005, Heddway"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
